@@ -1,7 +1,7 @@
 body{
     border: 0;
     margin: 0;
-    background: hsl(60, 8%, 83%);
+    background: #444;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -20,14 +20,15 @@ header {
     font-weight: 600;
 }
 
-#app{
+#main-content {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,0.1fr);
+    justify-items: center;
+
     background: #f23557;
     color: #f0d43a;
-    align-items: flex-start;
     padding-top: 70px;
-    grid-gap: 1em;
+    grid-gap: 2em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     min-height: 500px;
@@ -35,6 +36,12 @@ header {
 
 button{
     padding: 10px;
-    margin: 25px 55px;
+    margin: 0px 85px;
     border-radius: 10px;
+}
+
+
+footer {
+    margin-left:3rem;
+    color: whitesmoke;
 }
