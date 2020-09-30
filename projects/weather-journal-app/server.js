@@ -32,22 +32,18 @@ app.get('/dataRoute', routeData1);
 function routeData1 (req,res) {
     res.send(projectData);
     return projectData;
-
-};
-
-//Creating a POST endpoint
-app.post('https://localhost:8000/dataRoute', routeData2);
-function routeData2 (req,res) {
-    projectData.answer = req.body;
-    res.send('Request received');
- //   projectData.temperature = req.body.temperature;
- //   projectData.date = req.body.date;
- //   projectData.userResponse = req.body.userResponse;
 }
 
-// Callback function to complete GET '/all'
+//Creating a POST endpoint
+app.post('/dataRoute', routeData2);
+function routeData2 (req,res) {
+   console.log(req.body);
+   projectData.temp = req.body.temp;
+   projectData.date = req.body.date;
+   projectData.feeling = req.body.feeling;
+   res.send(projectData);
+}
 
-// Post Route
-  
+
 
     
